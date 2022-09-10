@@ -20,6 +20,10 @@ hsl(0, 74%, 74%));
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.logo-mobile {
+    display: none;
+}
+
 .container {
     @include flex-center(row);
     height: 100vh;
@@ -121,17 +125,22 @@ hsl(0, 74%, 74%));
 }
 
 @media(max-width: 500px) {
+    .logo-mobile {
+        display: block;
+        width: 100%;
+        padding-left: 10%;
+        margin: 7% 0;
+    }
     .container {
         height: fit-content;
-        @include flex-center(column);
+        @include flex-center(column-reverse);
     }
     .text-section {
         gap: 2rem;
         align-items: center;
+        padding: 20% 10% 30% 10%;
         .logo {
-            width: 100%;
-            padding: 0;
-            margin: 7% 0;
+            display: none;
         }
         .heading {
             text-align: center;

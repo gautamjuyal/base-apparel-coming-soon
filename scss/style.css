@@ -6,6 +6,10 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
+.logo-mobile {
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -116,6 +120,12 @@
 }
 
 @media (max-width: 500px) {
+  .logo-mobile {
+    display: block;
+    width: 100%;
+    padding-left: 10%;
+    margin: 7% 0;
+  }
   .container {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -123,16 +133,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .text-section {
     gap: 2rem;
     align-items: center;
+    padding: 20% 10% 30% 10%;
   }
   .text-section .logo {
-    width: 100%;
-    padding: 0;
-    margin: 7% 0;
+    display: none;
   }
   .text-section .heading {
     text-align: center;
